@@ -1,19 +1,57 @@
-a:link {
-    color: blue;
-    text-decoration: none;
-  }
+  body {
+            font-family: Georgia, serif;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #f7f7f7;
+        }
 
-  a:visited {
-    color: purple;
-  }
+        h1 {
+            border-bottom: 2px solid #555;
+            padding-bottom: 10px;
+            color: #333;
+        }
 
-  a:hover {
-    color: red;
-    text-decoration: underline;
-    background-color: #f0f0f0;
-  }
+        .pseudo-box {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            line-height: 1.6;
+        }
+        
+       
 
-  a:active {
-    color: orange;
-    font-weight: bold;
-  }
+        /* 1. ::first-letter (Стилізує першу літеру параграфа) */
+        #first-letter-demo::first-letter { /*  */
+            font-size: 2.5em; /* Збільшуємо розмір */
+            color: #a04040; /* Темно-червоний */
+            font-weight: bold;
+            float: left; /* Робимо літеру випадною */
+            margin-right: 8px;
+            line-height: 1;
+        }
+
+        /* 2. ::first-line (Стилізує перший рядок параграфа) */
+        #first-line-demo::first-line { /*  */
+            font-weight: bold;
+            color: #366fa9; /* Синій */
+            background-color: #e6f0ff;
+        }
+        
+        /* 3. ::before (Вставляє контент перед вмістом елемента) */
+        .article-title::before { /*  */
+            content: "📑 [ВСТУП]: "; /* Додаємо значок */
+            color: #366fa9;
+            font-weight: bold;
+            margin-right: 5px;
+        }
+
+        /* 4. ::after (Вставляє контент після вмісту елемента) */
+        .block-footer::after { /*  */
+            content: " | Кінець розділу 🔚"; /* Додаємо роздільник */
+            color: #888;
+            font-style: italic;
+            margin-left: 10px;
+        }
